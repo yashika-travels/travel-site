@@ -1,231 +1,876 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yashika Travels</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yashika Travels</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-*{box-sizing:border-box;margin:0;padding:0;}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body{
-font-family:'Poppins',sans-serif;
-background:#f4f8ff;
-color:#333;
-}
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #F1F5F9;
+      color: #1E293B;
+      padding-top: 80px;
+    }
 
-/* NAVBAR */
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 50px;
-background:white;
-box-shadow:0 3px 15px rgba(0,0,0,0.1);
-}
 
-.logo{
-font-size:24px;
-font-weight:700;
-color:#ff4d6d;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.menu{
-display:flex;
-gap:25px;
-}
+    section {
+      scroll-margin-top: 100px;
+    }
 
-.menu a{
-text-decoration:none;
-color:#333;
-font-weight:500;
-}
 
-/* HERO */
-.hero{
-height:85vh;
-background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-padding:20px;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #1E3A8A;
+    }
 
-.hero h1{
-font-size:50px;
-margin-bottom:15px;
-}
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
 
-.hero p{
-font-size:22px;
-margin-bottom:25px;
-}
+    .menu {
+      display: flex;
+      gap: 30px;
+    }
 
-.btn{
-background:#ff4d6d;
-color:white;
-padding:14px 28px;
-border:none;
-border-radius:8px;
-font-size:18px;
-cursor:pointer;
-}
+    .menu a {
+      text-decoration: none;
+      color: #475569;
+      font-weight: 500;
+      transition: 0.3s;
+    }
 
-/* SECTIONS */
-.section{
-padding:70px 20px;
-text-align:center;
-}
+    .menu a:hover {
+      color: #2563EB;
+    }
 
-.section h2{
-font-size:34px;
-margin-bottom:40px;
-}
+    .feedback-section {
+      background: #f4f8ff;
+    }
 
-/* CARDS */
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-}
+    .feedback-subtitle {
+      color: #555;
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
 
-.card{
-background:white;
-width:260px;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-transition:.3s;
-}
+    .feedback-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
 
-.card:hover{
-transform:translateY(-10px);
-}
+    .feedback-card {
+      width: 320px;
+      background: white;
+      padding: 15px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      text-align: center;
+    }
 
-/* GALLERY */
-.gallery{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
+    .feedback-card:hover {
+      transform: translateY(-10px);
+    }
 
-.gallery img{
-width:300px;
-height:300px;
-object-fit:cover;
-border-radius:15px;
-}
+    .feedback-card video {
+      width: 100%;
+      height: 200px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
 
-/* FOOTER */
-footer{
-background:#1a3c6e;
-color:white;
-padding:40px 20px;
-text-align:center;
-}
+    .feedback-card h4 {
+      margin-top: 15px;
+      color: #1a3c6e;
+      font-size: 16px;
+    }
 
-footer p{
-margin:10px;
-}
+    /* ABOUT SECTION */
+    .about-section {
+      padding: 90px 20px;
+      background: #ffffff;
+    }
 
-/* MOBILE RESPONSIVE */
-@media(max-width:768px){
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      max-width: 1100px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
 
-nav{
-flex-direction:column;
-gap:15px;
-padding:20px;
-}
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
 
-.menu{
-flex-wrap:wrap;
-justify-content:center;
-}
+    .about-text h2 {
+      font-size: 34px;
+      color: #1a3c6e;
+      margin-bottom: 20px;
+    }
 
-.hero h1{
-font-size:32px;
-}
+    .about-text p {
+      margin-bottom: 20px;
+      color: #555;
+      line-height: 1.6;
+    }
 
-.hero p{
-font-size:18px;
-}
+    .about-text ul {
+      list-style: none;
+      margin-bottom: 25px;
+    }
 
-.section h2{
-font-size:26px;
-}
+    .about-text ul li {
+      margin-bottom: 10px;
+      color: #333;
+      font-weight: 500;
+    }
 
-.card{
-width:90%;
-}
+    .about-btn {
+      display: inline-block;
+      background: #1E3A8A;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-.gallery img{
-width:90%;
-height:220px;
-}
+    .about-btn:hover {
+      background: #1E3A8A;
+    }
 
-}
+    .about-image {
+      flex: 1;
+      min-width: 300px;
+    }
 
-</style>
+    .about-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
 
+    /* VEHICLE SECTION */
+    .vehicles {
+      padding: 80px 20px;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .vehicles h2 {
+      font-size: 34px;
+      margin-bottom: 50px;
+      color: #1a3c6e;
+    }
+
+    .vehicle-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .vehicle-card {
+      width: 260px;
+      background: #f4f8ff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .vehicle-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .vehicle-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .vehicle-card h3 {
+      margin-top: 15px;
+      color: #1E3A8A;
+    }
+
+    .vehicle-card p {
+      padding: 10px 15px 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+
+    .service-icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #1E3A8A;
+    }
+
+    .card:hover .service-icon {
+      transform: scale(1.2);
+      transition: 0.3s;
+    }
+
+    /* BUSINESS SECTION - PROFESSIONAL VERSION */
+    .business-section {
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #0F172A, #1E293B);
+      text-align: center;
+      color: #E2E8F0;
+    }
+
+    .business-section h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    .business-subtitle {
+      margin-bottom: 60px;
+      color: #94A3B8;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    .business-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 35px;
+    }
+
+    /* CARD */
+    .business-card {
+      width: 300px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+      padding: 35px 25px;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    /* Hover Effect */
+    .business-card:hover {
+      transform: translateY(-8px);
+      border-color: #2563EB;
+      box-shadow: 0 20px 45px rgba(37, 99, 235, 0.2);
+    }
+
+    /* ICON */
+    .business-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(37, 99, 235, 0.1);
+      border-radius: 50%;
+      font-size: 28px;
+      color: #3B82F6;
+    }
+
+    /* TITLE */
+    .business-card h3 {
+      margin-bottom: 15px;
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    /* TEXT */
+    .business-card p {
+      font-size: 14px;
+      color: #CBD5E1;
+      line-height: 1.7;
+    }
+
+
+    /* SECTION */
+    .section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 34px;
+      margin-bottom: 40px;
+      color: #1a3c6e;
+    }
+
+
+    .business-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    /* CARDS */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      width: 260px;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #1E3A8A;
+    }
+
+    /* TRIP IMAGE CARDS */
+    .trip-card {
+      width: 280px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background: white;
+      transition: 0.3s;
+    }
+
+    .trip-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .trip-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .trip-card h4 {
+      padding: 15px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* FOOTER PREMIUM DESIGN */
+    footer {
+      background: #0F172A;
+      color: #CBD5E1;
+      padding: 70px 40px 30px;
+    }
+
+    /* Container */
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    /* Brand Section */
+    .footer-brand h2 {
+      color: #FFFFFF;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .footer-brand p {
+      color: #94A3B8;
+      line-height: 1.6;
+      font-size: 14px;
+      max-width: 350px;
+    }
+
+    /* Contact Section */
+    .footer-contact h3 {
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .footer-contact p {
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #94A3B8;
+      transition: 0.3s;
+    }
+
+    .footer-contact i {
+      margin-right: 10px;
+      color: #60A5FA;
+      width: 20px;
+    }
+
+    /* Hover effect */
+    .footer-contact p:hover {
+      color: #FFFFFF;
+      transform: translateX(5px);
+    }
+
+    /* Divider */
+    .footer-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      margin: 40px 0 20px;
+    }
+
+    /* Bottom */
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #64748B;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* HAMBURGER ICON */
+    .menu-toggle {
+      display: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #1E3A8A;
+    }
+
+    /* DEFAULT NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      /* important */
+      align-items: center;
+      padding: 0 20px;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+    }
+
+    /* HAMBURGER */
+    .menu-toggle {
+      display: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #1E3A8A;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+      .menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #ffffff;
+        width: 200px;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        display: none;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body id="home">
 
-<nav>
-<div class="logo">Yashika Travels</div>
-<div class="menu">
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Destinations</a>
-<a href="#">Contact</a>
-</div>
-</nav>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+      Yashika Travels
+    </div>
 
-<section class="section">
-<h2>Yashika Holidays</h2>
+    <div class="menu" id="menu">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#trips">Trips</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-<div class="gallery">
-<img src="1Media.jpeg">
-<img src="2Media.jpeg">
-</div>
-</section>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
 
-<section class="hero">
-<div>
-<h1>Explore The World With Us</h1>
-<p>Your journey begins with Yashika Travels ✈️</p>
-<button class="btn">Plan Your Trip</button>
-</div>
-</section>
+  <!-- ABOUT US -->
+  <section class="about-section">
+    <div class="about-container">
 
-<section class="section">
-<h2>Our Services</h2>
+      <div class="about-text">
+        <h2>About Yashika Travels</h2>
+        <p>
+          Yashika Travels is a professional travel and tour organizing company
+          providing complete end-to-end trip solutions.
+        </p>
 
-<div class="cards">
-<div class="card"><h3>✈️ Tour Packages</h3><p>Customized travel plans for dream destinations.</p></div>
-<div class="card"><h3>🏝 Honeymoon Trips</h3><p>Romantic getaways designed perfectly.</p></div>
-<div class="card"><h3>🎒 Budget Tours</h3><p>Affordable travel experiences.</p></div>
-<div class="card"><h3>🏨 Hotel Booking</h3><p>Best deals with comfort stays.</p></div>
-</div>
-</section>
+        <ul>
+          <li>✔ Pickup to Drop Arrangement</li>
+          <li>✔ Accommodation & Sightseeing</li>
+          <li>✔ College IV & Educational Tours</li>
+          <li>✔ Devotional & Family Packages</li>
+        </ul>
+
+        <a href="#" class="about-btn">Plan Your Trip With Us</a>
+      </div>
+
+      <div class="about-image">
+        <img src="images/Media1.jpeg" alt="Travel">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- VEHICLES -->
+  <section class="vehicles">
+    <h2>Our Vehicles</h2>
+
+    <div class="vehicle-container">
+
+      <div class="vehicle-card">
+        <img src="images/innova.jpeg" alt="Innova">
+        <h3>Innova</h3>
+        <p>Comfortable 7 Seater</p>
+      </div>
+
+      <div class="vehicle-card">
+        <img src="images/etios.jpeg" alt="Etios">
+        <h3>Etios</h3>
+        <p>Comfortable 4 Seater</p>
+      </div>
+
+      <div class="vehicle-card">
+        <img src="images/30seater.jpeg" alt="30 Seater">
+        <h3>30 Seater AC Van</h3>
+        <p>Best for Group Tours</p>
+      </div>
+
+      <div class="vehicle-card">
+        <img src="images/20seater.jpeg" alt="20 Seater">
+        <h3>20 Seater</h3>
+        <p>Perfect for Medium Groups</p>
+      </div>
+
+    </div>
+  </section>
 
 
 
-<footer>
-<h2>Contact Us</h2>
-<p>📞 +91 8778307712</p>
-<p>📧 yashikatravels88@gmail.com</p>
-<p>🌍 Travel More • Worry Less</p>
-</footer>
+
+  <!-- COMPLETED TRIPS -->
+  <section class="section">
+    <h2>Our Completed Trips</h2>
+
+    <div class="gallery">
+      <img src="images/Media1.jpeg">
+      <img src="images/Media2.jpeg">
+      <img src="images/Media3.jpeg">
+      <img src="images/Media4.png">
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="service-icon">
+          <i class="fa-solid fa-plane-departure"></i>
+        </div>
+        <h3>Tour Packages</h3>
+        <p>Customized travel plans for dream destinations.</p>
+      </div>
+
+      <div class="card">
+        <div class="service-icon">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <h3>Honeymoon Trips</h3>
+        <p>Romantic getaways designed perfectly.</p>
+      </div>
+
+      <div class="card">
+        <div class="service-icon">
+          <i class="fa-solid fa-wallet"></i>
+        </div>
+        <h3>Budget Tours</h3>
+        <p>Affordable travel experiences.</p>
+      </div>
+
+      <div class="card">
+        <div class="service-icon">
+          <i class="fa-solid fa-gopuram"></i>
+        </div>
+        <h3>Devotional Trips</h3>
+        <p>Iyyappan Kovil & Temple Special Packages.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- POPULAR TRIPS -->
+  <section class="section" id="trips">
+    <h2>Our Popular Trips</h2>
+
+    <div class="cards">
+
+      <div class="trip-card">
+        <img src="images/Kerala.jpg" alt="Kerala">
+        <h4>Kerala Tour</h4>
+      </div>
+
+      <div class="trip-card">
+        <img src="images/Munnar.jpg" alt="Munnar">
+        <h4>Munnar</h4>
+      </div>
+
+      <div class="trip-card">
+        <img src="images/Kanthaloor.jpg" alt="Kanthaloor">
+        <h4>Kanthaloor</h4>
+      </div>
+
+      <div class="trip-card">
+        <img src="images/banglore.jpg" alt="Bangalore">
+        <h4>Bangalore</h4>
+      </div>
+
+      <div class="trip-card">
+        <img src="images/Devotional.png" alt="Thiruchendur">
+        <h4>Devotional</h4>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- CUSTOMER FEEDBACK VIDEOS -->
+  <section class="section feedback-section">
+    <h2>Customer Feedback</h2>
+    <p class="feedback-subtitle">What our happy customers say about us ❤️</p>
+
+    <div class="feedback-container">
+
+      <div class="feedback-card">
+        <video controls>
+          <source src="images/Feedback1.mp4" type="video/mp4">
+        </video>
+        <h4>College IV Trip</h4>
+      </div>
+
+      <div class="feedback-card">
+        <video controls>
+          <source src="images/Feedback2.mp4" type="video/mp4">
+        </video>
+        <h4>Student Kerala Tour</h4>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OUR BUSINESS SERVICES -->
+  <section class="business-section" id="services">
+    <h2>Our Business Services</h2>
+    <p class="business-subtitle">
+      We offer multiple professional services for our customers
+    </p>
+
+    <div class="business-container">
+
+      <!-- TRAVELS -->
+      <div class="business-card">
+        <div class="business-icon">
+          <i class="fa-solid fa-bus"></i>
+        </div>
+        <h3>Travels</h3>
+        <p>
+          All type of vehicle rental services including Innova, Etios,
+          20 & 30 Seater AC vans for safe and comfortable journeys.
+        </p>
+      </div>
+
+      <!-- TOUR PACKAGING -->
+      <div class="business-card">
+        <div class="business-icon">
+          <i class="fa-solid fa-route"></i>
+        </div>
+        <h3>Tour Packaging</h3>
+        <p>
+          Complete end-to-end trip planning for College IV, Family Tours,
+          Devotional Trips and Corporate Outings.
+        </p>
+      </div>
+
+      <!-- BUS NEON LIGHT WORKS -->
+      <div class="business-card">
+        <div class="business-icon">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <h3>Bus Neon Light Works</h3>
+        <p>
+          Professional Neon & Decorative LED Light Fitting services
+          specially for Buses. Custom interior & exterior lighting
+          designs for night travel and events.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer id="contact">
+
+    <div class="footer-container">
+
+      <!-- LEFT SIDE -->
+      <div class="footer-brand">
+        <h2>Yashika Travels</h2>
+        <p>Your trusted travel partner for safe, comfortable and
+          memorable journeys.</p>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="footer-contact">
+        <h3>Contact Information</h3>
+
+        <p><i class="fa-solid fa-user"></i> SathiyaNarayanan</p>
+        <p><i class="fa-solid fa-phone"></i> +91 8778307712</p>
+        <p><i class="fa-solid fa-envelope"></i> yashikatravels88@gmail.com</p>
+        <p><i class="fa-brands fa-instagram"></i> @Yashika_holidays_official</p>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+      <p>© 2026 Yashika Travels. All Rights Reserved.</p>
+      <p>Travel More • Worry Less</p>
+    </div>
+
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/918778307712" class="whatsapp-btn" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const nav = document.querySelector("nav");
+      nav.classList.toggle("scrolled", window.scrollY > 10);
+    });
+  </script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("active");
+    }
+  </script>
+
 
 </body>
-</html>
 
+</html>
