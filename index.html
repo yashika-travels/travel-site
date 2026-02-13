@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+
+  <meta name="description"
+    content="Yashika Travels offers tour packages, college IV trips, vehicle rental services and bus neon light works. Safe and comfortable travel solutions.">
+
+  <meta name="keywords" content="Yashika Travels, college IV trip, tour packages, vehicle rental, bus light works">
+
+  <meta name="author" content="SathiyaNarayanan">
+
+  <meta name="robots" content="index, follow">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yashika Travels</title>
@@ -27,7 +37,6 @@
       padding-top: 80px;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
@@ -35,7 +44,6 @@
     section {
       scroll-margin-top: 100px;
     }
-
 
     .logo {
       display: flex;
@@ -216,7 +224,7 @@
 
     .vehicle-card img {
       width: 100%;
-      height: 300px;
+      height: 450px;
       object-fit: cover;
     }
 
@@ -370,13 +378,14 @@
 
     /* TRIP IMAGE CARDS */
     .trip-card {
-      width: 280px;
+      width: 100%;
+      max-width: 350px;
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       background: white;
-      transition: 0.3s;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
+
 
     .trip-card:hover {
       transform: translateY(-8px);
@@ -387,6 +396,7 @@
       height: 200px;
       object-fit: cover;
     }
+
 
     .trip-card h4 {
       padding: 15px;
@@ -503,6 +513,17 @@
       transform: scale(1.1);
     }
 
+    .gallery-item {
+      text-align: center;
+    }
+
+    .gallery-item p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #1E3A8A;
+      font-weight: 500;
+    }
+
     /* HAMBURGER ICON */
     .menu-toggle {
       display: none;
@@ -511,7 +532,6 @@
       color: #1E3A8A;
     }
 
-    /* DEFAULT NAV */
     nav {
       position: fixed;
       top: 0;
@@ -520,7 +540,6 @@
       height: 70px;
       display: flex;
       justify-content: space-between;
-      /* important */
       align-items: center;
       padding: 0 20px;
       background: #ffffff;
@@ -535,6 +554,18 @@
       cursor: pointer;
       color: #1E3A8A;
     }
+
+    .trip-btn {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 8px 18px;
+      background: #1E3A8A;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
 
     /* MOBILE */
     @media (max-width: 768px) {
@@ -559,8 +590,260 @@
       .menu-toggle {
         display: block;
       }
+
+      .vehicle-card {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .vehicles {
+        padding: 50px 15px;
+      }
+
+      .gallery {
+        gap: 15px;
+      }
+
+      .gallery-item {
+        width: 100%;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      .cards {
+        gap: 18px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+      }
+
+      .service-icon {
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
+
+      .card h3 {
+        font-size: 18px;
+      }
+
+      .card p {
+        font-size: 14px;
+      }
+
+
+      .feedback-card {
+        width: 100%;
+        max-width: 350px;
+        padding: 12px;
+      }
+
+      .feedback-card h4 {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+
+      /* ULTRA CLEAN MOBILE PACKAGE DESIGN */
+
+      .popular-card {
+        width: 100%;
+        max-width: 340px;
+        border-radius: 12px;
+      }
+
+      .popular-image img {
+        height: 170px;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .popular-content {
+        padding: 10px 12px;
+      }
+
+      .popular-content h4 {
+        font-size: 17px;
+        margin-bottom: 4px;
+      }
+
+      .popular-duration {
+        font-size: 12px;
+        margin-bottom: 6px;
+        color: #666;
+      }
+
+      /* 2 COLUMN FEATURE GRID */
+      .popular-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+
+      .popular-features span {
+        background: #f1f5f9;
+        padding: 4px 6px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      /* CLEAN FULL WIDTH BUTTON */
+      .popular-btn {
+        width: 100%;
+        padding: 8px;
+        font-size: 13px;
+        border-radius: 6px;
+      }
+
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('images/Media1.jpeg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 45px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 700px;
+    }
+
+    .hero-btn {
+      background: #2563EB;
+      padding: 14px 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .hero-btn:hover {
+      background: #1E40AF;
+    }
+
+    .popular-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .popular-card {
+      width: 320px;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .popular-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .popular-image {
+      position: relative;
+    }
+
+    .popular-image img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .discount-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #ff5722;
+      color: white;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 20px;
+    }
+
+    .popular-content {
+      padding: 15px;
+    }
+
+    .popular-content h4 {
+      margin-bottom: 8px;
+      color: #1E3A8A;
+    }
+
+    .popular-duration {
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .popular-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .popular-btn {
+      display: block;
+      text-align: center;
+      padding: 8px;
+      background: #1E3A8A;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .special-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #d97706;
+      color: white;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 20px;
+    }
+
+    .special-price {
+      background: #fff7ed;
+      color: #b45309;
+      padding: 8px;
+      font-size: 13px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      text-align: center;
     }
   </style>
+
+
 </head>
 
 <body id="home">
@@ -584,34 +867,17 @@
     </div>
   </nav>
 
-  <!-- ABOUT US -->
-  <section class="about-section">
-    <div class="about-container">
-
-      <div class="about-text">
-        <h2>About Yashika Travels</h2>
-        <p>
-          Yashika Travels is a professional travel and tour organizing company
-          providing complete end-to-end trip solutions.
-        </p>
-
-        <ul>
-          <li>✔ Pickup to Drop Arrangement</li>
-          <li>✔ Accommodation & Sightseeing</li>
-          <li>✔ College IV & Educational Tours</li>
-          <li>✔ Devotional & Family Packages</li>
-        </ul>
-
-        <a href="#" class="about-btn">Plan Your Trip With Us</a>
-      </div>
-
-      <div class="about-image">
-        <img src="images/Media1.jpeg" alt="Travel">
-      </div>
-
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Explore the World with Yashika Travels</h1>
+      <p>
+        Safe • Comfortable • Affordable Travel Solutions for College IV,
+        Family Tours, Devotional Trips & Vehicle Rentals.
+      </p>
+      <a href="#contact" class="hero-btn">Book Your Trip Now</a>
     </div>
   </section>
-
 
   <!-- VEHICLES -->
   <section class="vehicles">
@@ -650,15 +916,33 @@
 
 
   <!-- COMPLETED TRIPS -->
-  <section class="section">
+  <section class="section" id="trips">
     <h2>Our Completed Trips</h2>
 
     <div class="gallery">
-      <img src="images/Media1.jpeg">
-      <img src="images/Media2.jpeg">
-      <img src="images/Media3.jpeg">
-      <img src="images/Media4.png">
+
+      <div class="gallery-item">
+        <img src="images/Media1.jpeg" alt="Munnar Trip">
+        <p>Munnar Trip</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/Media2.jpeg" alt="Kerala Tour">
+        <p>Kerala Tour</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/Media3.jpeg" alt="College IV Trip">
+        <p>College IV Trip</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/Media4.png" alt="Devotional Tour">
+        <p>Girls Kollimalai Trip</p>
+      </div>
+
     </div>
+
 
   </section>
 
@@ -705,39 +989,131 @@
 
 
   <!-- POPULAR TRIPS -->
-  <section class="section" id="trips">
+  <!-- POPULAR TRIPS -->
+  <section class="section">
     <h2>Our Popular Trips</h2>
 
-    <div class="cards">
+    <div class="popular-container">
 
-      <div class="trip-card">
-        <img src="images/Kerala.jpg" alt="Kerala">
-        <h4>Kerala Tour</h4>
+      <!-- Kerala (With Discount) -->
+      <div class="popular-card">
+        <div class="popular-image">
+          <img src="images/Kerala.jpg" alt="Kerala">
+          <span class="discount-badge">20% OFF</span>
+        </div>
+
+        <div class="popular-content">
+          <h4>Kerala Tour</h4>
+
+          <div class="popular-duration">
+            <i class="fa-solid fa-clock"></i>
+            Days & Nights – As per your wish
+          </div>
+
+          <div class="popular-features">
+            <span><i class="fa-solid fa-car"></i> Transport</span>
+            <span><i class="fa-solid fa-utensils"></i> Meals</span>
+            <span><i class="fa-solid fa-eye"></i> Sightseeing</span>
+            <span><i class="fa-solid fa-hotel"></i> Stay</span>
+          </div>
+
+          <a href="https://wa.me/918778307712" class="popular-btn">
+            Enquire Now
+          </a>
+        </div>
       </div>
 
-      <div class="trip-card">
-        <img src="images/Munnar.jpg" alt="Munnar">
-        <h4>Munnar</h4>
+      <!-- Munnar -->
+      <div class="popular-card">
+        <div class="popular-image">
+          <img src="images/Munnar.jpg" alt="Munnar">
+        </div>
+
+        <div class="popular-content">
+          <h4>Munnar</h4>
+
+          <div class="popular-duration">
+            <i class="fa-solid fa-clock"></i>
+            Days & Nights – As per your wish
+          </div>
+
+          <div class="popular-features">
+            <span><i class="fa-solid fa-car"></i> Transport</span>
+            <span><i class="fa-solid fa-utensils"></i> Meals</span>
+            <span><i class="fa-solid fa-eye"></i> Sightseeing</span>
+            <span><i class="fa-solid fa-hotel"></i> Stay</span>
+          </div>
+
+          <a href="https://wa.me/918778307712" class="popular-btn">
+            Enquire Now
+          </a>
+        </div>
       </div>
 
-      <div class="trip-card">
-        <img src="images/Kanthaloor.jpg" alt="Kanthaloor">
-        <h4>Kanthaloor</h4>
+      <!-- Kanthaloor -->
+      <div class="popular-card">
+        <div class="popular-image">
+          <img src="images/Kanthaloor.jpg" alt="Kanthaloor">
+        </div>
+
+        <div class="popular-content">
+          <h4>Kanthaloor</h4>
+
+          <div class="popular-duration">
+            <i class="fa-solid fa-clock"></i>
+            Days & Nights – As per your wish
+          </div>
+
+          <div class="popular-features">
+            <span><i class="fa-solid fa-car"></i> Transport</span>
+            <span><i class="fa-solid fa-utensils"></i> Meals</span>
+            <span><i class="fa-solid fa-eye"></i> Sightseeing</span>
+            <span><i class="fa-solid fa-hotel"></i> Stay</span>
+          </div>
+
+          <a href="https://wa.me/918778307712" class="popular-btn">
+            Enquire Now
+          </a>
+        </div>
       </div>
 
-      <div class="trip-card">
-        <img src="images/banglore.jpg" alt="Bangalore">
-        <h4>Bangalore</h4>
-      </div>
 
-      <div class="trip-card">
-        <img src="images/Devotional.png" alt="Thiruchendur">
-        <h4>Devotional</h4>
+      <!-- Devotional Package -->
+      <div class="popular-card devotional-card">
+
+        <div class="popular-image">
+          <img src="images/Devotional.png" alt="Ayyappa Swamy">
+          <span class="special-badge">Special Dharisanam</span>
+        </div>
+
+        <div class="popular-content">
+          <h4>Devotional Trips</h4>
+
+          <div class="popular-duration">
+            <i class="fa-solid fa-clock"></i>
+            Days & Nights – As per your wish
+          </div>
+
+          <div class="popular-features">
+            <span><i class="fa-solid fa-car"></i> Transport</span>
+            <span><i class="fa-solid fa-utensils"></i> Meals</span>
+            <span><i class="fa-solid fa-eye"></i> Sightseeing</span>
+            <span><i class="fa-solid fa-hotel"></i> Stay</span>
+          </div>
+
+          <div class="special-price">
+            🔥 Special Price for Ayyappa Swamy Dharisanam
+          </div>
+
+          <a href="https://wa.me/918778307712" class="popular-btn">
+            Enquire Now
+          </a>
+
+        </div>
+
       </div>
 
     </div>
-
-
   </section>
 
 
@@ -814,6 +1190,36 @@
 
     </div>
   </section>
+
+
+  <!-- ABOUT US -->
+  <section class="about-section">
+    <div class="about-container">
+
+      <div class="about-text">
+        <h2>About Yashika Travels</h2>
+        <p>
+          Yashika Travels is a professional travel and tour organizing company
+          providing complete end-to-end trip solutions.
+        </p>
+
+        <ul>
+          <li>✔ Pickup to Drop Arrangement</li>
+          <li>✔ Accommodation & Sightseeing</li>
+          <li>✔ College IV & Educational Tours</li>
+          <li>✔ Devotional & Family Packages</li>
+        </ul>
+
+        <a href="#" class="about-btn">Plan Your Trip With Us</a>
+      </div>
+
+      <div class="about-image">
+        <img src="images/Media1.jpeg" alt="Travel">
+      </div>
+
+    </div>
+  </section>
+
 
 
   <!-- FOOTER -->
