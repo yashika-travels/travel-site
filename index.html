@@ -932,6 +932,11 @@
       font-size: 14px;
     }
 
+    .popular-btn {
+      border: none;
+      cursor: pointer;
+    }
+
     .special-badge {
       position: absolute;
       top: 12px;
@@ -959,6 +964,69 @@
       font-size: 15px;
       margin-top: -10px;
       margin-bottom: 40px;
+    }
+
+    .booking-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .booking-form {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .booking-form h3 {
+      text-align: center;
+      color: #1E40AF;
+    }
+
+    .booking-form input,
+    .booking-form select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-buttons button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .form-buttons button:first-child {
+      background: #25D366;
+      color: white;
+    }
+
+    .close-btn {
+      background: #ccc;
+    }
+
+    .vehicle-btn {
+      border: none;
+      cursor: pointer;
     }
   </style>
 
@@ -998,6 +1066,32 @@
     </div>
   </section>
 
+  <!-- BOOKING POPUP -->
+  <div class="booking-overlay" id="bookingOverlay">
+    <div class="booking-form">
+      <h3>Book Your Trip</h3>
+
+      <input type="hidden" id="vehicleName">
+
+      <select id="tripType">
+        <option value="">Select Trip Type</option>
+        <option>One Way</option>
+        <option>Round Trip</option>
+        <option>One Day Tour</option>
+      </select>
+
+      <input type="date" id="travelDate" placeholder="Travel Date">
+      <input type="text" id="pickup" placeholder="Pickup Location">
+      <input type="text" id="drop" placeholder="Drop Location">
+      <input type="number" id="persons" placeholder="Number of Persons">
+
+      <div class="form-buttons">
+        <button onclick="sendToWhatsApp()">Send to WhatsApp</button>
+        <button class="close-btn" onclick="closeForm()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
   <!-- VEHICLES -->
   <section class="vehicles section">
     <h2>Our Vehicles</h2>
@@ -1020,7 +1114,9 @@
             <span><i class="fa-solid fa-suitcase"></i> Luggage</span>
           </div>
 
-          <a href="https://wa.me/918778307712" class="vehicle-btn">Book Now</a>
+          <button class="vehicle-btn" onclick="openForm('Innova')">
+            Book Now
+          </button>
         </div>
       </div>
 
@@ -1038,7 +1134,9 @@
             <span><i class="fa-solid fa-suitcase"></i> Luggage</span>
           </div>
 
-          <a href="https://wa.me/918778307712" class="vehicle-btn">Book Now</a>
+          <button class="vehicle-btn" onclick="openForm('Etios')">
+            Book Now
+          </button>
         </div>
       </div>
 
@@ -1055,7 +1153,9 @@
             <span><i class="fa-solid fa-user-group"></i> 30 Seats</span>
             <span><i class="fa-solid fa-music"></i> Music</span>
           </div>
-          <a href="https://wa.me/918778307712" class="vehicle-btn">Book Now</a>
+          <button class="vehicle-btn" onclick="openForm('30 Seater AC Van')">
+            Book Now
+          </button>
         </div>
       </div>
 
@@ -1073,7 +1173,9 @@
             <span><i class="fa-solid fa-tv"></i> TV</span>
           </div>
 
-          <a href="https://wa.me/918778307712" class="vehicle-btn">Book Now</a>
+          <button class="vehicle-btn" onclick="openForm('20 Seater')">
+            Book Now
+          </button>
         </div>
       </div>
 
@@ -1227,6 +1329,30 @@
   </section>
 
 
+  <!-- TRIP ENQUIRY POPUP -->
+  <div class="booking-overlay" id="tripOverlay">
+    <div class="booking-form">
+      <h3>Trip Enquiry</h3>
+
+      <input type="hidden" id="tripName">
+
+      <label>From Date</label>
+      <input type="date" id="fromDate">
+
+      <label>To Date</label>
+      <input type="date" id="toDate">
+
+      <input type="number" id="tripPersons" placeholder="Number of Persons">
+
+      <input type="text" id="tripPickup" placeholder="Pickup Location">
+
+      <div class="form-buttons">
+        <button onclick="sendTripToWhatsApp()">Send to WhatsApp</button>
+        <button class="close-btn" onclick="closeTripForm()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
   <!-- POPULAR TRIPS -->
   <section class="section">
     <h2>Our Popular Trips</h2>
@@ -1256,9 +1382,10 @@
             <span><i class="fa-solid fa-hotel"></i> Stay</span>
           </div>
 
-          <a href="https://wa.me/918778307712" class="popular-btn">
+          <button class="popular-btn" onclick="openTripForm('Kerala Tour')">
             Enquire Now
-          </a>
+          </button>
+
         </div>
       </div>
 
@@ -1283,9 +1410,10 @@
             <span><i class="fa-solid fa-hotel"></i> Stay</span>
           </div>
 
-          <a href="https://wa.me/918778307712" class="popular-btn">
+          <button class="popular-btn" onclick="openTripForm('Munnar')">
             Enquire Now
-          </a>
+          </button>
+
         </div>
       </div>
 
@@ -1309,10 +1437,10 @@
             <span><i class="fa-solid fa-eye"></i> Sightseeing</span>
             <span><i class="fa-solid fa-hotel"></i> Stay</span>
           </div>
-
-          <a href="https://wa.me/918778307712" class="popular-btn">
+          <button class="popular-btn" onclick="openTripForm('Kanthaloor')">
             Enquire Now
-          </a>
+          </button>
+
         </div>
       </div>
 
@@ -1344,9 +1472,10 @@
             🔥 Special Price for Ayyappa Swamy Dharisanam
           </div>
 
-          <a href="https://wa.me/918778307712" class="popular-btn">
+          <button class="popular-btn" onclick="openTripForm('Devotional Trip')">
             Enquire Now
-          </a>
+          </button>
+
 
         </div>
 
@@ -1538,6 +1667,75 @@
         observer.observe(el);
       });
   </script>
+
+  <script>
+    function openForm(vehicle) {
+      document.getElementById("bookingOverlay").style.display = "flex";
+      document.getElementById("vehicleName").value = vehicle;
+    }
+
+    function closeForm() {
+      document.getElementById("bookingOverlay").style.display = "none";
+    }
+
+    function sendToWhatsApp() {
+      const vehicle = document.getElementById("vehicleName").value;
+      const tripType = document.getElementById("tripType").value;
+      const date = document.getElementById("travelDate").value;
+      const pickup = document.getElementById("pickup").value;
+      const drop = document.getElementById("drop").value;
+      const persons = document.getElementById("persons").value;
+
+      const message = `Hello Yashika Travels 👋
+
+Vehicle: ${vehicle}
+Trip Type: ${tripType}
+Travel Date: ${date}
+Pickup: ${pickup}
+Drop: ${drop}
+Persons: ${persons}
+
+Please share price details.`;
+
+      const url = "https://wa.me/918778307712?text=" + encodeURIComponent(message);
+      window.open(url, "_blank");
+    }
+  </script>
+
+  <script>
+    function openTripForm(trip) {
+      document.getElementById("tripOverlay").style.display = "flex";
+      document.getElementById("tripName").value = trip;
+    }
+
+    function closeTripForm() {
+      document.getElementById("tripOverlay").style.display = "none";
+    }
+
+    function sendTripToWhatsApp() {
+
+      const trip = document.getElementById("tripName").value;
+      const from = document.getElementById("fromDate").value;
+      const to = document.getElementById("toDate").value;
+      const persons = document.getElementById("tripPersons").value;
+      const pickup = document.getElementById("tripPickup").value;
+
+      const message = `Hello Yashika Travels 👋
+
+Trip: ${trip}
+From Date: ${from}
+To Date: ${to}
+Number of Persons: ${persons}
+Pickup Place: ${pickup}
+
+Please share package details & price.`;
+
+      const url = "https://wa.me/918778307712?text=" + encodeURIComponent(message);
+
+      window.open(url, "_blank");
+    }
+  </script>
+
 
 </body>
 
