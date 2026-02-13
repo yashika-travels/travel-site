@@ -26,13 +26,80 @@
       padding: 0;
     }
 
+    .cta-section {
+      background: linear-gradient(135deg, #1E3A8A, #2563EB);
+      padding: 70px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .cta-btn {
+      background: white;
+      color: #1E40AF;
+      padding: 12px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    nav.scrolled {
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .vehicles {
+      background: #F8FAFC;
+      padding: 80px 20px;
+    }
+
+    .section:nth-child(even) {
+      background: #FFFFFF;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.8s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      font-size: 34px;
+      margin-bottom: 40px;
+      color: #1E3A8A;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+
+    .section h2::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: #2563EB;
+      display: block;
+      margin: 15px auto 0;
+      border-radius: 5px;
+    }
+
+
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: #F1F5F9;
+      font-family: 'Poppins', sans-serif;
+      background: #F8FAFC;
       color: #1E293B;
       padding-top: 80px;
     }
@@ -49,14 +116,14 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 20px;
-      font-weight: 600;
-      color: #1E3A8A;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1E293B;
     }
 
     .logo img {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
     }
 
     .menu {
@@ -165,7 +232,7 @@
 
     .about-btn {
       display: inline-block;
-      background: #1E3A8A;
+      background: #1E40AF;
       color: white;
       padding: 12px 25px;
       border-radius: 8px;
@@ -175,7 +242,7 @@
     }
 
     .about-btn:hover {
-      background: #1E3A8A;
+      background: #1E40AF;
     }
 
     .about-image {
@@ -189,19 +256,6 @@
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     }
 
-    /* VEHICLE SECTION */
-    .vehicles {
-      padding: 80px 20px;
-      background: #ffffff;
-      text-align: center;
-    }
-
-    .vehicles h2 {
-      font-size: 34px;
-      margin-bottom: 50px;
-      color: #1a3c6e;
-    }
-
     .vehicle-container {
       display: flex;
       flex-wrap: wrap;
@@ -210,40 +264,91 @@
     }
 
     .vehicle-card {
-      width: 260px;
-      background: #f4f8ff;
-      border-radius: 15px;
+      width: 300px;
+      background: #ffffff;
+      border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
       transition: 0.3s;
     }
 
     .vehicle-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
     }
 
     .vehicle-card img {
       width: 100%;
-      height: 300px;
-      object-fit: cover;
+      height: auto;
+      display: block;
     }
 
-    .vehicle-card h3 {
-      margin-top: 15px;
-      color: #1E3A8A;
+
+    .vehicle-content {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
-    .vehicle-card p {
-      padding: 10px 15px 20px;
+    .vehicle-content h3 {
+      color: #1E40AF;
+      margin-bottom: 6px;
+    }
+
+    .vehicle-type {
       font-size: 14px;
-      color: #555;
+      color: #64748B;
+      margin-bottom: 12px;
     }
 
+    .vehicle-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .vehicle-features span {
+      background: #E0E7FF;
+      padding: 6px;
+      border-radius: 6px;
+      font-size: 12px;
+      text-align: center;
+      color: #1E40AF;
+    }
+
+    .vehicle-btn {
+      margin-top: auto;
+      text-align: center;
+      padding: 10px;
+      background: #1E40AF;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .vehicle-btn:hover {
+      background: #2563EB;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    .vehicle-btn {
+      transition: all 0.3s ease;
+    }
+
+    .vehicle-card {
+      border: 1px solid #E2E8F0;
+    }
 
     .service-icon {
       font-size: 32px;
       margin-bottom: 15px;
-      color: #1E3A8A;
+      color: #1E40AF;
     }
 
     .card:hover .service-icon {
@@ -254,7 +359,7 @@
     /* BUSINESS SECTION - PROFESSIONAL VERSION */
     .business-section {
       padding: 100px 20px;
-      background: linear-gradient(135deg, #0F172A, #1E293B);
+      background: linear-gradient(135deg, #0B132B, #1E3A8A);
       text-align: center;
       color: #E2E8F0;
     }
@@ -335,13 +440,6 @@
       text-align: center;
     }
 
-    .section h2 {
-      font-size: 34px;
-      margin-bottom: 40px;
-      color: #1a3c6e;
-    }
-
-
     .business-img {
       width: 100%;
       height: 180px;
@@ -373,7 +471,7 @@
 
     .card h3 {
       margin-bottom: 10px;
-      color: #1E3A8A;
+      color: #1E40AF;
     }
 
     /* TRIP IMAGE CARDS */
@@ -420,7 +518,7 @@
 
     /* FOOTER PREMIUM DESIGN */
     footer {
-      background: #0F172A;
+      background: #0B132B;
       color: #CBD5E1;
       padding: 70px 40px 30px;
     }
@@ -520,7 +618,7 @@
     .gallery-item p {
       margin-top: 8px;
       font-size: 14px;
-      color: #1E3A8A;
+      color: #1E40AF;
       font-weight: 500;
     }
 
@@ -529,7 +627,7 @@
       display: none;
       font-size: 22px;
       cursor: pointer;
-      color: #1E3A8A;
+      color: #1E40AF;
     }
 
     nav {
@@ -537,14 +635,15 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 70px;
+      height: 80px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0 20px;
-      background: #ffffff;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.9);
     }
 
     /* HAMBURGER */
@@ -552,23 +651,36 @@
       display: none;
       font-size: 22px;
       cursor: pointer;
-      color: #1E3A8A;
+      color: #1E40AF;
     }
 
     .trip-btn {
       display: inline-block;
       margin-bottom: 15px;
       padding: 8px 18px;
-      background: #1E3A8A;
+      background: #1E40AF;
       color: white;
       text-decoration: none;
       border-radius: 6px;
       font-size: 14px;
     }
 
+    footer h2,
+    footer h3 {
+      letter-spacing: 0.5px;
+    }
 
     /* MOBILE */
     @media (max-width: 768px) {
+
+      .hero-content h1 {
+        font-size: 32px;
+        line-height: 1.2;
+      }
+
+      .hero-content p {
+        font-size: 15px;
+      }
 
       .menu {
         position: absolute;
@@ -704,7 +816,7 @@
 
     /* HERO SECTION */
     .hero {
-      height: 90vh;
+      min-height: 90vh;
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('images/Media1.jpeg') center/cover no-repeat;
       display: flex;
@@ -788,7 +900,7 @@
 
     .popular-content h4 {
       margin-bottom: 8px;
-      color: #1E3A8A;
+      color: #1E40AF;
     }
 
     .popular-duration {
@@ -813,7 +925,7 @@
       display: block;
       text-align: center;
       padding: 8px;
-      background: #1E3A8A;
+      background: #1E40AF;
       color: white;
       text-decoration: none;
       border-radius: 6px;
@@ -840,6 +952,13 @@
       margin-bottom: 12px;
       font-weight: 600;
       text-align: center;
+    }
+
+    .section-subtitle {
+      color: #64748B;
+      font-size: 15px;
+      margin-top: -10px;
+      margin-bottom: 40px;
     }
   </style>
 
@@ -880,39 +999,147 @@
   </section>
 
   <!-- VEHICLES -->
-  <section class="vehicles">
+  <section class="vehicles section">
     <h2>Our Vehicles</h2>
-
+    <p class="section-subtitle">
+      Flexible Booking Options: One Way, Two way Trip & One Day Tours
+    </p>
     <div class="vehicle-container">
 
+      <!-- Innova -->
       <div class="vehicle-card">
         <img src="images/innova.jpeg" alt="Innova">
-        <h3>Innova</h3>
-        <p>Comfortable 7 Seater</p>
+
+        <div class="vehicle-content">
+          <h3>Innova</h3>
+          <p class="vehicle-type">Comfortable 7 Seater</p>
+
+          <div class="vehicle-features">
+            <span><i class="fa-solid fa-snowflake"></i> AC</span>
+            <span><i class="fa-solid fa-user-group"></i> 7 Seats</span>
+            <span><i class="fa-solid fa-suitcase"></i> Luggage</span>
+          </div>
+
+          <a href="https://wa.me/918778307712" class="vehicle-btn">Book Now</a>
+        </div>
       </div>
 
+      <!-- Etios -->
       <div class="vehicle-card">
         <img src="images/etios.jpeg" alt="Etios">
-        <h3>Etios</h3>
-        <p>Comfortable 4 Seater</p>
+
+        <div class="vehicle-content">
+          <h3>Etios</h3>
+          <p class="vehicle-type">Comfortable 4 Seater</p>
+
+          <div class="vehicle-features">
+            <span><i class="fa-solid fa-snowflake"></i> AC</span>
+            <span><i class="fa-solid fa-user"></i> 4 Seats</span>
+            <span><i class="fa-solid fa-suitcase"></i> Luggage</span>
+          </div>
+
+          <a href="https://wa.me/918778307712" class="vehicle-btn">Book Now</a>
+        </div>
       </div>
 
+      <!-- 30 Seater -->
       <div class="vehicle-card">
         <img src="images/30seater.jpeg" alt="30 Seater">
-        <h3>30 Seater AC Van</h3>
-        <p>Best for Group Tours</p>
+
+        <div class="vehicle-content">
+          <h3>30 Seater AC Van</h3>
+          <p class="vehicle-type">Best for Group Tours</p>
+
+          <div class="vehicle-features">
+            <span><i class="fa-solid fa-snowflake"></i> AC</span>
+            <span><i class="fa-solid fa-user-group"></i> 30 Seats</span>
+            <span><i class="fa-solid fa-music"></i> Music</span>
+          </div>
+          <a href="https://wa.me/918778307712" class="vehicle-btn">Book Now</a>
+        </div>
       </div>
 
+      <!-- 20 Seater -->
       <div class="vehicle-card">
         <img src="images/20seater.jpeg" alt="20 Seater">
-        <h3>20 Seater</h3>
-        <p>Perfect for Medium Groups</p>
+
+        <div class="vehicle-content">
+          <h3>20 Seater</h3>
+          <p class="vehicle-type">Perfect for Medium Groups</p>
+
+          <div class="vehicle-features">
+            <span><i class="fa-solid fa-snowflake"></i> Non AC</span>
+            <span><i class="fa-solid fa-user-group"></i> 20 Seats</span>
+            <span><i class="fa-solid fa-tv"></i> TV</span>
+          </div>
+
+          <a href="https://wa.me/918778307712" class="vehicle-btn">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+    <h2>Why Choose Yashika Travels?</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="service-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3>Safe & Secure</h3>
+        <p>Experienced drivers and well-maintained vehicles for safe journeys.</p>
+      </div>
+
+      <div class="card">
+        <div class="service-icon">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <h3>Affordable Pricing</h3>
+        <p>Best travel packages at competitive and budget-friendly prices.</p>
+      </div>
+
+      <div class="card">
+        <div class="service-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3>24/7 Support</h3>
+        <p>We are available anytime to assist you during your trip.</p>
       </div>
 
     </div>
   </section>
 
+  <!-- STATS SECTION -->
+  <section class="business-section">
+    <h2>Our Achievements</h2>
+    <p class="business-subtitle">Trusted by hundreds of happy travelers</p>
 
+    <div class="business-container">
+
+      <div class="business-card">
+        <h3>500+</h3>
+        <p>Successful Trips Completed</p>
+      </div>
+
+      <div class="business-card">
+        <h3>1000+</h3>
+        <p>Happy Customers</p>
+      </div>
+
+      <div class="business-card">
+        <h3>10+</h3>
+        <p>Years of Experience</p>
+      </div>
+
+    </div>
+  </section>
 
 
   <!-- COMPLETED TRIPS -->
@@ -957,7 +1184,10 @@
           <i class="fa-solid fa-plane-departure"></i>
         </div>
         <h3>Tour Packages</h3>
-        <p>Customized travel plans for dream destinations.</p>
+        <p>
+          Customized domestic tour packages with complete
+          travel planning, accommodation, transport and guided sightseeing.
+        </p>
       </div>
 
       <div class="card">
@@ -965,7 +1195,10 @@
           <i class="fa-solid fa-heart"></i>
         </div>
         <h3>Honeymoon Trips</h3>
-        <p>Romantic getaways designed perfectly.</p>
+        <p>
+          Specially curated romantic honeymoon packages with premium stays,
+          private transfers and unforgettable couple experiences.
+        </p>
       </div>
 
       <div class="card">
@@ -973,7 +1206,10 @@
           <i class="fa-solid fa-wallet"></i>
         </div>
         <h3>Budget Tours</h3>
-        <p>Affordable travel experiences.</p>
+        <p>
+          Affordable travel packages designed for students, families and groups
+          without compromising comfort and safety.
+        </p>
       </div>
 
       <div class="card">
@@ -981,7 +1217,10 @@
           <i class="fa-solid fa-gopuram"></i>
         </div>
         <h3>Devotional Trips</h3>
-        <p>Iyyappan Kovil & Temple Special Packages.</p>
+        <p>
+          Temple and spiritual tour packages including Iyyappan Kovil trips,
+          special dharisanam arrangements and complete travel support.
+        </p>
       </div>
 
     </div>
@@ -989,9 +1228,9 @@
 
 
   <!-- POPULAR TRIPS -->
-  <!-- POPULAR TRIPS -->
   <section class="section">
     <h2>Our Popular Trips</h2>
+    <p class="section-subtitle">Explore the best routes and stays chosen by our travelers</p>
 
     <div class="popular-container">
 
@@ -1220,6 +1459,14 @@
     </div>
   </section>
 
+  <!-- CALL TO ACTION -->
+  <section class="cta-section">
+    <h2 style="margin-bottom:15px;">Ready To Plan Your Next Trip?</h2>
+    <p style="margin-bottom:25px;">Contact us now and get special offers for your journey.</p>
+    <a href="https://wa.me/918778307712" class="cta-btn">
+      Book Now on WhatsApp
+    </a>
+  </section>
 
 
   <!-- FOOTER -->
@@ -1276,6 +1523,21 @@
     }
   </script>
 
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    document.querySelectorAll(".card, .vehicle-card, .popular-card, .business-card")
+      .forEach(el => {
+        el.classList.add("fade-up");
+        observer.observe(el);
+      });
+  </script>
 
 </body>
 
